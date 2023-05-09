@@ -1,8 +1,13 @@
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Menu {
-    private static List<Drink> drinks;
-    private static List<Meal> meals;
+    private  List<Drink> drinks;
+    private  List<Meal> meals;
+
+    public Menu() {
+    }
 
     public Menu(List<Drink> drinks, List<Meal> meals) {
         this.drinks = drinks;
@@ -17,14 +22,12 @@ public class Menu {
         drinks.add(drink);
     }
 
-    public static Meal getMeals() {
-        Meal meal=new Meal("pizza",34);
-        meals.add(getMeals());
-        return meal;
+    public List<Meal> getMeals() {
+        return this.meals;
     }
-    public static Drink getDrink(){
-        Drink drink=new Drink("wine",100);
-        drinks.add(getDrink());
-        return drink;
+    public  List<Drink> getDrinks(){
+        return this.drinks;
     }
+
+
 }
